@@ -12,6 +12,10 @@ const  productSchema= new mongoose.Schema({
         type: String,
         trim:true
     },
+    category:{
+        type: mongoose.Types.ObjectId,
+        ref:"category",
+    },
     availability:{
         type:String,
         trim:true
@@ -24,10 +28,15 @@ const  productSchema= new mongoose.Schema({
         default: true,
     },
     },
-    {
-        timestamps: true,
-        versionKey: false,
-    }
+    // {
+    //     timestamps: true,
+    //     versionKey: false,
+    //     toJSON:{
+    //         transform:function(doc,data){
+    //             if(data)
+    //         }
+    //     }
+    // }
     );
     const product= mongoose.model("product", productSchema);
     module.exports = product;
