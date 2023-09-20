@@ -1,6 +1,6 @@
 const express = require("express");
-const { userValidation } = require("../validations/user.validation");
-const { userController } = require("../controllers/user.controller");
+const { uservalidation } = require("../validations");
+const { userController } = require("../controllers");
 const validate = require("../middlewares/validate");
 
 const router = express.Router();
@@ -8,27 +8,27 @@ const router = express.Router();
 /** create user */
 router.post(
   "/create-user",
-  validate(userValidation.createuser),
+  validate(uservalidation.createuser),
   userController.createuser
 );
 
 /** Get user list */
 router.get(
   "/list",
-  // validate(userValidation.getuserList),
+  // validate(uservalidation.getuserList),
   userController.getuserList
 );
 
 /** Get user details by id */
 router.get(
   "/get-details/:userId",
-  // validate(userValidation.getDetails),
+  // validate(uservalidation.getDetails),
   userController.getuserDetails
 );
 /** Delete user */
 router.delete(
   "/delete-user/:userId",
-  // validate(userValidation.getDetails),
+  // validate(uservalidation.getDetails),
   userController.deleteuser
 );
 

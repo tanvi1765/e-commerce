@@ -1,4 +1,5 @@
-module.exports.userService = require("./user.service");
-module.exports.categoryService = require("./category.service");
-module.exports.productService = require("./product.service");
-module.exports.tokenService = require("./token.service");
+module.exports.categoryservice = require("./category.service");
+module.exports.productservice = require("./product.service");
+module.exports.subcategoryservice = require("./subcategory.service");
+module.exports.tokenservice = require("./token.service");
+module.exports.userservice = require("./user.service");

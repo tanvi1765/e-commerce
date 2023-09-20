@@ -1,6 +1,6 @@
 const express = require("express");
-const { productValidation } = require("../validations/product.validation");
-const { productController } = require("../controllers/product.controller");
+const { productvalidation } = require("../validations");
+const { productController } = require("../controllers");
 const validate = require("../middlewares/validate");
 
 const router = express.Router();
@@ -8,27 +8,27 @@ const router = express.Router();
 /** create product */
 router.post(
   "/create-product",
-  validate(productValidation.createproduct),
+  validate(productvalidation.createproduct),
   productController.createproduct
 );
 
 /** Get product list */
 router.get(
   "/list",
-  // validate(productValidation.getproductList),
+  // validate(productvalidation.getproductList),
   productController.getproductList
 );
 
 /** Get product details by id */
 router.get(
   "/get-details/:productId",
-  // validate(productValidation.getDetails),
+  // validate(productvalidation.getDetails),
   productController.getproductDetails
 );
 /** Delete product */
 router.delete(
   "/delete-product/:productId",
-  // validate(productValidation.getDetails),
+  // validate(productvalidation.getDetails),
   productController.deleteproduct
 );
 

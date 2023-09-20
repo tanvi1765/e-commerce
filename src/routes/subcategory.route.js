@@ -1,35 +1,35 @@
 const express = require("express");
-const { subsubcategoryValidation } = require("../validations/subsubcategory.validation");
-const { subsubcategoryController } = require("../controllers/subsubcategory.controller");
+const { subcategoryvalidation } = require("../validations");
+const { subcategoryController } = require("../controllers");
 const validate = require("../middlewares/validate");
 
 const router = express.Router();
 
-/** create subsubcategory */
+/** create subcategory */
 router.post(
-  "/create-subsubcategory",
-  validate(subsubcategoryValidation.createsubsubcategory),
-  subsubcategoryController.createsubsubcategory
+  "/create-subcategory",
+  validate(subcategoryvalidation.createsubcategory),
+  subcategoryController.createsubcategory
 );
 
-/** Get subsubcategory list */
+/** Get subcategory list */
 router.get(
   "/list",
-  // validate(subsubcategoryValidation.getsubsubcategoryList),
-  subsubcategoryController.getsubsubcategoryList
+  // validate(subcategoryvalidation.getsubcategoryList),
+  subcategoryController.getsubcategoryList
 );
 
-/** Get subsubcategory details by id */
+/** Get subcategory details by id */
 router.get(
-  "/get-details/:subsubcategoryId",
-  // validate(subsubcategoryValidation.getDetails),
-  subsubcategoryController.getsubsubcategoryDetails
+  "/get-details/:subcategoryId",
+  // validate(subcategoryvalidation.getDetails),
+  subcategoryController.getsubcategoryDetails
 );
-/** Delete subsubcategory */
+/** Delete subcategory */
 router.delete(
-  "/delete-subsubcategory/:subsubcategoryId",
-  // validate(subsubcategoryValidation.getDetails),
-  subsubcategoryController.deletesubsubcategory
+  "/delete-subcategory/:subcategoryId",
+  // validate(subcategoryvalidation.getDetails),
+  subcategoryController.deletesubcategory
 );
 
 module.exports = router;

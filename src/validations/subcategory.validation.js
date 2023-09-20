@@ -1,17 +1,15 @@
 const Joi = require("joi");
 
-/** create user */
-const createuser = {
+/** create subcategory */
+const createsubcategory = {
   body: Joi.object().keys({
-    first_name: Joi.string().required().trim(),
-    last_name: Joi.string().required().trim(),
-    user_add: Joi.string().required().trim(),
-    user_req: Joi.string().required().trim(),
+    subsubcategory_name: Joi.string().required().trim(),
+    other_type: Joi.string().required().trim(),
   }),
 };
 
-/** GEt user list */
-const getuserList = {
+/** GEt subcategory list */
+const getsubcategoryList = {
   query: Joi.object().keys({
     search: Joi.string().trim().allow(""),
     sortBy: Joi.string().trim().allow(""),
@@ -20,15 +18,15 @@ const getuserList = {
   }),
 };
 
-/** Get user details by id */
+/** Get subcategory details by id */
 const getDetails = {
   params: Joi.object().keys({
-    userId: Joi.string().required().trim(),
+    subcategoryId: Joi.string().required().trim(),
   }),
 };
 
 module.exports = {
-  createuser,
+  createsubcategory,
+  getsubcategoryList,
   getDetails,
-  getuserList,
 };

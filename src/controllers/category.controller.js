@@ -18,13 +18,13 @@ const createcategory = async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-       success: false, 
+       success: false,
        message: error.message });
   }
 };
 
 /** Get category list */
-const getcategorylist = async (req, res) => {
+const getcategoryList= async (req, res) => {
   try {
     res.status(200).json({
       success: true,
@@ -32,7 +32,7 @@ const getcategorylist = async (req, res) => {
       data: getcategorylist,
     });
   } catch (error) {
-    res.status(400).json({ 
+    res.status(400).json({
       success: false,
        message: error.message });
   }
@@ -80,7 +80,7 @@ const getcategoryDetails = async (req, res) => {
 };
 module.exports = {
    createcategory,
-   getcategorylist,
+   getcategoryList,
    getcategoryDetails,
    deletecategory,
 };
