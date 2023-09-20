@@ -13,6 +13,7 @@
     "auth": "^0.0.9",
     "axios": "^1.4.0",
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "cron": "^2.4.1",
     "crone": "^0.0.1",
     "dotenv": "^16.3.1",
@@ -25,6 +26,7 @@
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.29.4",
     "mongoose": "^7.4.3",
+    "multer": "^1.4.5-lts.1",
     "nodemon": "^3.0.1"
   }
 }
